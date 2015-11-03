@@ -1,1 +1,3 @@
+/node_modules
 src/app/components/*/*.js
+src/app/components/*/*.js.map
