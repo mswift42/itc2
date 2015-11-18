@@ -5,7 +5,15 @@ import {Injectable} from 'angular2/angular2';
 @Injectable()
 export class ThemeService {
 	theme: Theme;
-	
-	constructor() {}
 
+    get() : Theme {
+		return this.theme;
+	}
+	changeColor(face: Face): void {
+		for (var i of this.theme.faces) {
+			if (i.name == face.name) {
+				i.color = face.color;
+			}
+		}
+	}
 }
