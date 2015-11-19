@@ -1,6 +1,6 @@
-import {Theme} from '../Theme';
-import {Face} from '../Face';
-import {Injectable} from 'angular2/angular2';
+import {Theme} from "../Theme";
+import {Face} from "../Face";
+import {Injectable} from "angular2/angular2";
 
 @Injectable()
 export class ThemeService {
@@ -8,6 +8,9 @@ export class ThemeService {
 
     get() : Theme {
 		return this.theme;
+	}
+	set(theme: Theme) {
+		this.theme = theme;
 	}
 	changeColor(face: Face): void {
 		for (var i of this.theme.faces) {
