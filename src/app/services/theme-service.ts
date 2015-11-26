@@ -6,12 +6,18 @@ import {Injectable} from "angular2/angular2";
 export class ThemeService {
 	theme: Theme;
 
-    get() : Theme {
-		return this.theme;
-	}
-	set(theme: Theme) {
+	constructor(theme: Theme) {
 		this.theme = theme;
 	}
+
+    getTheme() : Theme {
+		return this.theme;
+	}
+	setTheme(theme: Theme) {
+		this.theme = theme;
+	}
+	// changeColor sets one themeface of
+	// 'theme' to a new color.
 	changeColor(face: Face): void {
 		for (var i of this.theme.faces) {
 			if (i.name == face.name) {
